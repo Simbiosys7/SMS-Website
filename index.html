@@ -685,25 +685,28 @@
           </div>
         </div>
       </div>
-      <form onsubmit="event.preventDefault(); this.querySelector('.form-submit').textContent='Request sent';">
+      <form id="contactForm" action="https://formsubmit.co/ashish@simbiosyscorp.com" method="POST">
+        <input type="hidden" name="_subject" value="New enquiry from the Simbiosys website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
         <div class="field-row">
           <div>
             <label for="fname">Name</label>
-            <input id="fname" type="text" required>
+            <input id="fname" name="Name" type="text" required>
           </div>
           <div>
             <label for="fcompany">Company</label>
-            <input id="fcompany" type="text" required>
+            <input id="fcompany" name="Company" type="text" required>
           </div>
         </div>
         <div class="field-row">
           <div>
             <label for="femail">Work email</label>
-            <input id="femail" type="email" required>
+            <input id="femail" name="Work email" type="email" required>
           </div>
           <div>
             <label for="farea">Practice area</label>
-            <select id="farea">
+            <select id="farea" name="Practice area">
               <option>Software Engineering</option>
               <option>AI</option>
               <option>Cybersecurity</option>
@@ -714,9 +717,9 @@
         </div>
         <div>
           <label for="fmsg">What are you trying to get built?</label>
-          <textarea id="fmsg" required></textarea>
+          <textarea id="fmsg" name="Message" required></textarea>
         </div>
-        <p class="form-note">This form is a preview and doesn't send yet — reach out by email in the meantime.</p>
+        <p class="form-note">Submitting sends this straight to our team — we'll follow up by email.</p>
         <button class="form-submit" type="submit">Send request</button>
       </form>
     </div>
